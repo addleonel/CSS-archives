@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flexbox</title>
+	<link rel="stylesheet" href="styles_flex.css">
+</head>
+<body>
+	<!-- flex -->
+	<div class="container-box">
+		<div class="box box-1">1</div>
+		<div class="box box-2">2</div>
+		<div class="box box-3">3</div>
+	</div>
+	
+	<!-- flex direction -->
+	<div class="container-row-reverse">
+		<div class="box box-1">1</div>
+		<div class="box box-2">2</div>
+		<div class="box box-3">3</div>
+	</div>
+
+	<div class="container-column">
+		<div class="box box-1">1</div>
+		<div class="box box-2">2</div>
+		<div class="box box-3">3</div>
+	</div>
+
+	<div class="container-column-reverse">
+		<div class="box box-1">1</div>
+		<div class="box box-2">2</div>
+		<div class="box box-3">3</div>
+	</div>
+
+	<!-- justify content -->
+	<div class="container-with-justify">
+		<div class="box box-1">1</div>
+		<div class="box box-2">2</div>
+		<div class="box box-3">3</div>
+	</div>
+
+	<div class="container-with-align">
+		<div class="box box-1">1</div>
+		<div class="box box-2">2</div>
+		<div class="box box-3">3</div>
+	</div>
+	
+	<!-- using flex-wrap -->
+	<h6 style="color:#fff;">with align item</h6>
+	<div class="container-with-align">
+		<div class="box box-1">1</div>
+		<div class="box box-2">2</div>
+		<div class="box box-3">3</div>
+		<div class="box box-1">4</div>
+		<div class="box box-2">5</div>
+		<div class="box box-3">6</div>
+		<div class="box box-1">7</div>
+		<div class="box box-2">8</div>
+		<div class="box box-3">9</div>
+		<div class="box box-1">10</div>
+		<div class="box box-2">11</div>
+		<div class="box box-3">12</div>
+		<div class="box box-1">13</div>
+		<div class="box box-2">14</div>
+		<div class="box box-3">15</div>
+	</div>
+	
+	<!-- properties for elements into a container -->
+	<div class="container-grow">
+		<div class="box box-1" style="flex-shrink:1;">1</div>
+		<!-- flex-shrink:1(default); -->
+		<div class="box box-2" style="flex-grow:0;">2</div>
+		<!-- flex-grow:0(default); -->
+		<div class="box box-3">3</div>
+	</div>
+
+	<div id="box-container">
+	  <div id="box-1" style="font-size: 100px"></div>
+	  <div id="box-2" style="font-size: 100px"></div>
+	  <div id="box-3" style="font-size: 100px;"></div>
+	</div>
+	
+	<div id="box-container">
+		<!-- order: 0 (default); -->
+	  	<div class="box box-2" style="order:3;background-color: brown">14</div>
+	  	<div class="box box-2" style="order:1;background-color: blue">14</div>
+	  	<div class="box box-2" style="order:2;background-color: green">14</div>
+	</div>
+
+	<div id="box-container">
+		<!-- align-self:flex-start|flex-end|center; -->
+	  	<div class="box box-2" style="align-self:flex-end;background-color: brown">14</div>
+	  	<div class="box box-2" style="align-self:flex-start;background-color: blue">14</div>
+	  	<div class="box box-2" style="align-self:center;">14</div>
+	</div>
+</body>
+</html>

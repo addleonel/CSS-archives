@@ -1,0 +1,153 @@
+/*In CSS Grid, the parent element is referred to 
+as the container and its children are called items.*/
+
+/*fr(fraction): sets the column or row to a fraction of the available space,
+auto: sets the column or row to the width or height of its content automatically,
+%: adjusts the column or row to the percent width of its container.
+*/
+
+/*grid-template-columns*/
+/*grid-template-rows*/
+.grid-container-1{
+	background-color: red;
+	display: grid;
+	grid-template-columns: 200px 1fr 2fr 3fr; /*values: <size_of_1_column> <size_of_2_column> <size_of_3_column> ...*/
+	grid-template-rows: 100px 100px 100px; /*values: <size_of_1_row> <size_of_2_row> <size_of_3_row> ...*/
+}
+
+.grid-item{
+	background-color: white;
+	border:1px solid #000;
+	font-size: 20px;
+	text-align: center;
+	padding: 20px;
+}
+
+/*grid-column-gap*/
+/*grid-row-gap*/
+.grid-container-2{
+	margin-top:20px;
+	background:linear-gradient(45deg, red, green, yellow);
+	display:grid;
+	grid-template-rows:1fr 1fr 1fr;
+	grid-template-columns:1fr 2fr 3fr;
+	/*normal form*/
+	/*grid-row-gap:10px;
+	grid-column-gap:20px;*/
+	/*faster form*/
+	grid-gap: 10px 20px; /*values: <row> <column>*/
+}
+
+.grid-container-3{
+	margin-top:20px;
+	background:radial-gradient(red, green, yellow);
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows:1fr 1fr 1fr;
+	grid-gap:10px;
+}
+/*this is for items*/
+/*grid-column and grid-row*/
+.i-3{
+	grid-column:3/5; /*values: <from line>/<to line>*/
+}
+
+.i-9{
+	grid-column:5/6;
+	grid-row:2/4; /*values: <from lines>/<to lines>*/
+}
+
+/* align horizontally with justify-self */
+/* align vertically with align-self */
+.i-5{
+	justify-self:center; /*values:start | center | end; */
+	align-self: end; /*values:start | center | end; */
+}
+
+
+/*align horizontally and vertically all items*/
+.grid-container-4{
+	margin-top:20px;
+	background:linear-gradient(45deg, red 10%, orange 50%, yellow);
+	display:grid;
+	grid-template-columns:1fr 2fr 3fr;
+	grid-template-rows: 2fr 2fr 2fr 2fr;
+	justify-items:center; /*align horizontaly all items values: start|center|end*/
+	align-items:end; /*align vertically all items values: start|center|end*/
+
+}
+
+.grid-container-5{
+	margin-top:20px;
+	background:linear-gradient(45deg, blue 20%, orange 60%, yellow);
+	display: grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-template-rows:1fr 1fr 1fr;
+	grid-template-areas:
+	"header header header"
+	"advert content content"
+	"footer footer footer"
+	;
+}
+
+/*Place Items in Grid Areas Using the grid-area Property*/
+.c-1{
+	background-color: green;
+	grid-area:header;
+}
+/*Use grid-area Without Creating an Areas Template*/
+/*grid-area: horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at;*/
+
+.c-2{
+	background-color:blue;
+	grid-area:2/1/4/2;
+}
+
+.grid-container-6{
+	margin-top:20px;
+	display: grid;
+	grid-template-columns:repeat(2, minmax(100px, 1fr)) 1fr; /*minmax() is used to limit the size of items when the grid container changes size.*/
+	grid-template-rows:1fr repeat(2, 1fr);
+}
+
+/*using repeat(auto-fill, minmax(60px, 1fr));*/
+.grid-container-7{
+	margin-top:20px;
+	background:linear-gradient(45deg, red 20%, orange 50%, yellow);
+	display:grid;
+	grid-template-columns:repeat(auto-fill, minmax(50px, 1fr));
+	grid-template-rows:1fr 1fr 1fr;
+	grid-gap:10px 20px;
+}
+
+
+/*using repeat(auto-fit, minmax(60px, 1fr))*/
+.grid-container-8{
+	margin-top:20px;
+	background-color:rgb(23, 43, 45);
+	display:grid;
+	grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+	grid-template-rows:1fr 1fr 1fr;
+	grid-gap:20px 10px;
+}
+
+/*
+grid properties and values that you should know for
+web development
+
+for the container
+first all grid propersties need:
+display: grid;
+then should add column's number and row's number
+grid-template-columns: repeat(auto-fit,minmax(100px, ifr)) ;
+grid-template-rows: 1fr 1fr 1fr;
+grid-template-area:
+	"header header header header"
+	"topic content content content"
+	"footer footer footer footer" 
+;
+if you need add a gap between rows and columns:
+grid-gap:<gap between rows> <gap between columns>;
+
+
+*/

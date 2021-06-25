@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+        <title>Build A Survey Form</title>
+    </head>
+    <body>
+        <section id="title-container">
+            <h1 id="title">Website Survey Form</h1>
+            <p id="description">Thank you for taking the time to help us improve platform</p>
+        </section>
+        <section id="form-container">
+            
+            <form id="survey-form" action="" method="">
+                <div class="sub-form">
+                    <label id="name-label" for="name">Name</label>
+                    <input id="name" class="effects" type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="sub-form">
+                    <label id="email-label" for="email">Email</label>
+                    <input id="email" class="effects" type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="sub-form">
+                    <label id="number-label">What is your age?</label>
+                    <input id="number" class="effects" type="number" min="10" max="100" placeholder="Age">
+                </div>
+                <div class="sub-form">
+                    <label id="planguage">What programming language are you using currently?</label>
+                    <input id="planguage" class="effects" type="text" placeholder="Your programing language">
+                </div>
+                <div class="sub-form">
+                    <label for="dropdown">What is your current role?</label>
+                    <select id="dropdown" class="effects">
+                        <option value="current" selected disabled>Select current role</option>
+                        <option value="student">Student</option>
+                        <option value="fulltimejob">Teacher</option>
+                        <option value="fulltimelearner">Developer</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="sub-form">
+                    <p>Would you recommend this website to a friend?</p>
+                    <div class="sub-form__radios">
+                        <input id="definitely" type="radio" name="recommend" value="definitely">
+                        <label for="definitely">Definitely</label>
+                        <input id="maybe" type="radio" name="recommend" value="maybe">
+                        <label for="maybe">Maybe</label>
+                        <input id="notsure" type="radio" name="recommend" value="notsure">
+                        <label for="notsure">Not Sure</label>
+                    </div>
+                </div>
+                <div class="sub-form">
+                    <p>What Programming Language do you want to learn here?</p>
+                    <div class="sub-form__checkboxs">
+                        <div class="sub-form__checkboxs__item">
+                            <input id="javascript" type="checkbox" name="javascript" value="javascript">
+                            <label for="javascript">Javascript<label>
+                        </div>
+                        <div class="sub-form__checkboxs__item">
+                            <input id="python" type="checkbox" name="python" value="python">
+                            <label for="python">Python<label>
+                        </div>
+                        <div class="sub-form__checkboxs__item">
+                            <input id="java" type="checkbox" name="java" value="java">
+                            <label for="java">Java<label>
+                        </div>
+                        <div class="sub-form__checkboxs__item">
+                            <input id="csharp" type="checkbox" name="csharp" value="csharp">
+                            <label for="csharp">C#<label>
+                        </div>
+                        <div class="sub-form__checkboxs__item">
+                            <input id="ruby" type="checkbox" name="ruby" value="ruby">
+                            <label for="ruby">Ruby<label>
+                        </div>
+                        <div class="sub-form__checkboxs__item">
+                            <input id="cpluplus" type="checkbox" name="cplusplus" value="cplusplus">
+                            <label for="cplusplus">C++<label>
+                        </div>
+                        <div class="sub-form__checkboxs__item">
+                            <input id="c" type="checkbox" name="c" value="c">
+                            <label for="c">C<label>
+                        </div>
+                        <div class="sub-form__checkboxs__item">
+                            <input id="kotlin" type="checkbox" name="kotlin" value="kotlin">
+                            <label for="kotlin">Kotlin<label>
+                        </div>
+                        <div class="sub-form__checkboxs__item">
+                            <input id="rust" type="checkbox" name="rust" value="rust">
+                            <label for="rust">Rust<label>
+                        </div>
+                        <div class="sub-form__checkboxs__item">
+                            <input id="go" type="checkbox" name="go" value="go">
+                            <label for="go">Go<label>
+                        </div>
+                        <div class="sub-form__checkboxs__item">
+                            <input id="swift" type="checkbox" name="swift" value="swift">
+                            <label for="swift">Swift<label>
+                        </div>
+                        <div class="sub-form__checkboxs__item">
+                            <input id="r" type="checkbox" name="r" value="r">
+                            <label for="r">R<label>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-form">
+                    <label for="comment">Comments or suggestions</label>
+                    <textarea id="comment" placeholder="Enter your comment here... "></textarea>
+                </div>
+                <button id="submit">Submit</button>
+            </form>
+        </section>
+        <!--scripts section-->
+        
+        <!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
+    </body>
+</html>

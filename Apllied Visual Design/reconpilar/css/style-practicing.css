@@ -1,0 +1,418 @@
+:root{
+	--color-rec:yellow;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background-color: #000;
+	/*background:linear-gradient(0deg, #fff, #000);*/
+}
+
+.rec{
+	border:2px solid #000;
+	width:300px;
+	height:300px;
+	margin:auto;
+	position: relative;
+}
+
+.rec-inside{
+	border:2px solid #000;
+	position: absolute;
+	left:30px;
+	top:30px;
+}
+
+.rec-inside-box{
+	border:2px solid rgb(0, 0, 0);
+	width: 2em;	
+	height: 2em;
+	background-color: var(--color-rec);
+	display:inline-block;
+	margin: 10px 5px;
+}
+
+.rec-one{
+	width:1em;
+	height:1em;
+	background-color: blue;
+	
+}
+.rec-two{
+	width: 17px;
+	height: 17px;
+	background-color: green;
+
+}
+
+.gradient{
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	background:linear-gradient(45deg, #ccc, white); /*linear-gradient(degraa, color1, color2, color3, ...)*/
+}
+
+.gradient-repeat{
+	width:200px;
+	height:200px;
+	margin: auto;
+	background:repeating-linear-gradient(0deg, red, yellow 10%, green 30%);
+	box-shadow:25px 10px 50px 10px #ccc;
+	transform: scale(1);
+	transition: 0.4s;
+	cursor:pointer;
+}
+.gradient-repeat:hover{
+	transform:scale(1.5);
+	background:repeating-linear-gradient(45deg, red, yellow 20%, green 30%);
+	box-shadow:0px 0px 20px 0px #ccc;
+}
+
+.ball-1{
+	float: left;
+	border:2px solid #000;
+	width:100px;
+	height:100px;
+	border-radius: 50%;
+	/*background:linear-gradient(45deg, green,yellow);*/
+	animation:ballmoving 5s ease-in-out infinite;
+	position: relative;
+	transition: 0.4s all;
+	cursor:pointer;
+}
+.ball-1:hover{
+	background:linear-gradient(45deg, red, yellow);
+}
+
+@keyframes ballmoving{
+	0%{
+		top:0px;
+		left: 0px;
+		background-color: red;
+	}
+	
+	25%{
+		top:-200px;
+		left:200px;
+		/*background:linear-gradient(135deg, green, yellow);*/
+		transform:scale(1.5);
+		background-color: yellow;
+	}
+	50%{
+		top:0px;
+		left:400px;
+		transform: scale(1);
+		background-color: red;
+
+	}
+	75%{
+		top:-100px;
+		left: 200px;
+		background-color: yellow
+	}
+
+	100%{
+		top:0px;
+		left:0px;
+		background-color: red;
+	}
+}
+
+.ball-2{
+	width:100px;
+	height:100px;
+	border-radius: 50%;
+	border:2px solid #000;
+	position:relative;
+	background-color: green;
+	float:right;
+	animation:ballother 5s ease-in-out infinite;
+}
+
+ @keyframes ballother{
+	0%{
+		top:0px;
+		right:0px;
+	}
+	25%{
+		top:-200px;
+		right: 200px;
+		transform: scale(1.5);
+		background-color: yellow;
+	}
+	50%{
+		top:0px;
+		right:400px;
+		transform: scale(1);
+		background-color: green;
+	}
+	75%{
+		top:-100px;
+		right: 200px;
+		background-color: yellow;
+	}
+	100%{
+		top: 0px;
+		right: 0px;
+	}
+ }
+
+/*HOME*/
+.drawing{
+	width: 300px;
+	height:300px;
+	position: relative;
+	margin: auto;
+	border:10px solid #80460a;
+	background-color: green;
+	z-index: 3000;
+}
+.city{
+	width: 300px;
+	height:300px;
+	position: absolute;
+	background-color: #6ea7ef;
+	cursor:pointer;
+
+}
+
+.cloud-1{
+	position: absolute;
+	width:30px;
+	height:30px;
+	top: 5%;
+	left:10%;
+	border-radius: 50%;
+	background: linear-gradient(45deg, #ccc, #fff);
+	animation:cloudmove 90s ease-in-out infinite;
+	z-index: 1;
+}
+@keyframes cloudmove{
+	0%{
+		left:10%;
+	}
+	50%{
+		left: 75%;
+	}
+	100%{
+		left:10%;
+	}
+
+}
+
+.cloud-1::before{
+	content:"";
+	position: absolute;
+	width:50px;
+	height:30px;
+	top: 0;
+	left:-20px;
+	border-radius: 50%;
+	background: linear-gradient(45deg, #999, #fff);
+
+}
+.cloud-1::after{
+	content:"";
+	position: absolute;
+	width:50px;
+	height:30px;
+	top: 0;
+	left:20px;
+	border-radius: 50%;
+	background: linear-gradient(30deg, #ccc, #fff);
+
+}
+
+.cloud-2{
+	position: absolute;
+	width:30px;
+	height:30px;
+	top: 5%;
+	right:40%;
+	border-radius: 50%;
+	background: linear-gradient(45deg, #ccc, #fff);
+	z-index: 2;
+}
+.cloud-2::before{
+	content:"";
+	position: absolute;
+	width:50px;
+	height:30px;
+	top: 0;
+	left:-20px;
+	border-radius: 50%;
+	background: linear-gradient(45deg, #999, #fff)
+}
+.cloud-2::after{
+	content:"";
+	position: absolute;
+	width:50px;
+	height:30px;
+	top: 0;
+	left:20px;
+	border-radius: 50%;
+	background: linear-gradient(30deg, #ccc, #fff);
+}
+
+.moon{
+	position: absolute;
+	top:80%;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	animation:themoon 2s ease-in-out infinite;
+}
+@keyframes themoon{
+	0%{
+		background-color: #3e8acc;
+	}
+	50%{
+		background-color: #ccc;
+		transform: scale(1.2);
+	}
+	100%{
+		background-color: #3e8acc;
+	}
+}
+.sun{
+	position: absolute;
+	top:10px;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: yellow;
+	animation:thesun 2s ease-in-out infinite;
+	
+}
+
+@keyframes thesun{
+	0%{
+		background-color: yellow;
+	}
+	50%{
+		background-color: #fff;
+		transform: scale(1.2);
+	}
+}
+.ufo{
+	position: absolute;
+	width: 50px;
+	height: 10px;
+	border-radius: 50% 100%;
+	top:0;
+	left: 0;
+	box-shadow: 0px 0px 40px 0px #fff;
+	animation:ufomoving 1s 1;
+	animation-delay: 2s;
+}
+@keyframes ufomoving{
+	0%{background-color: transparent;}
+	50%{top:30%;left:60%;background-color: #ccc;}
+	100%{top:90%;left: 80%;background-color: transparent;transform: rotate(90deg);}
+}
+
+.home{
+	width:100px;
+	height:100px;
+	background:linear-gradient(90deg, #3E2723, #A1887F);
+	position: absolute;
+	top:32%;
+	left:32%;
+	transition: 0.4s all;
+	cursor:pointer;
+}
+.home:hover{
+	top:100px;
+	right: 300px; 
+}
+.home::before{
+	content: "";
+	position: absolute;
+	width: 0px;
+	height:0px;
+	background-color: transparent;
+	border:50px solid;
+	border-color: #ccc transparent transparent transparent;
+	transform:rotate(180deg);
+	top:-100px;
+}
+
+.home::after{
+	content: "";
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background-color: transparent;
+	border:20px solid;
+	border-color: transparent transparent brown transparent;
+	left:-20px;
+	top:-20px;
+}
+
+.home-door{
+	position: absolute;
+	width: 30px;
+	height: 40px;
+	background-color: #ccc;
+	top:60%;
+	left:35%;
+}
+.win-right{
+	position: absolute;
+	width:20px;
+	height: 20px;
+	background-color:#ccc;
+	right: 10%;
+	top: 20%;
+}
+.win-left{
+	position: absolute;
+	top:;
+	width:20px;
+	height: 20px;
+	background-color: #ccc;
+	left:10%; 
+	top:20%;
+}
+
+.cespet{
+	position: absolute;
+	width: 100%;
+	height: 28.9%;
+	left:0;
+	top:71.5%;
+	background:linear-gradient(20deg, #0d400d, #09fd09);
+	
+}
+
+.cespet-message{
+	position:absolute;
+	font-family: 'Lobster', cursive;
+	color:#fff;
+	font-size: 30px;
+	border:2px solid #ccc;
+	left:20%;
+	padding: 10px;
+}
+
+.city:hover{
+	background: linear-gradient(45deg, #233a71, blue);
+}
+.city:hover .sun{
+	top:80%;
+}
+.city:hover .moon{
+	top:4%;
+}
+.city:hover .cespet{
+	background: linear-gradient(45deg, #042304, #048a04)
+}
+
+.city:hover .home{
+	background: linear-gradient(45deg, #1f0a06, #5a4842);
+}

@@ -1,0 +1,158 @@
+:root{
+	--color-main:#f7f7f7;
+	font-family: 'Noto Sans', sans-serif;
+}
+
+*{
+	box-sizing: border-box;
+	margin:0;
+	padding: 0;
+}
+
+#main{
+	background-color: var(--color-main);
+}
+
+.header-container{
+	padding-top:40px;
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items: center;
+    background:linear-gradient(90deg, var(--color-main),#fff, var(--color-main));
+
+}
+
+#title{
+	font-size: 40px;
+	text-align: center;
+}
+
+.header-container p{
+	margin-top: 10px;
+	padding: 20px;
+	font-size: 20px;
+	text-align: center;
+}
+
+#img-div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top:20px;
+}
+
+#image{
+	display: block;
+	max-width: 100%;
+	height:auto;
+	border-left:30px solid #0f035d;
+}
+#img-caption{
+	text-align: center;
+	background-color: #f7eaea;
+	padding: 20px;
+}
+
+#img-caption p{
+	margin:0px 20% 0 20%;
+}
+
+#tribute-info{
+	margin-top:50px;
+}
+
+.summary-events{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.summary-events ul{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	grid-template-rows: 1fr;
+	grid-column-gap:5px; 
+	margin:20px 10% 0 10%;
+	grid-column-gap: 10px;
+}
+
+.summary-events ul li{
+	display: inline-block;
+	border:1px solid #ccc;
+	border-top:2px solid green;
+	border-radius: 5px;
+	text-align: center;
+	align-self: flex-start;
+	padding: 10px;
+	background-color: #fff;
+	box-shadow: 0px 6px 2px 0px #ccc;
+}
+
+.full-events{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top:40px;
+}
+
+.full-events ul{
+	margin:20px 20% 0 20%;
+	
+	
+}
+
+.full-events ul li{
+	padding: 5px 30px;
+	margin-bottom: 8px;
+	background-color: #FFF;
+	border:1px solid #ccc;
+	border-left: 2px solid #0f035d;
+	border-radius: 5px;
+	line-height: 30px;
+	list-style-type: none;
+}
+
+.phrase{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #0f035d;
+	color:#fff;
+	padding: 50px 40px;
+	margin-top:20px;
+}
+
+.more-info{
+	background-color:#000;
+	color: #fff;
+	text-align: center;
+	padding: 30px 20px 30px 20px;
+}
+
+.more-info a{
+	color:#d09999;
+	text-decoration:none;
+
+}
+
+.more-info a:hover{
+	color:#e8cbcb;
+}
+
+@media screen and (max-width: 800px) {
+	#img-caption p{
+		margin:20px 2% 0 2%;
+	}
+	
+	.summary-events ul{
+		margin:20px 0% 0 0%;
+	}
+	
+	.full-events ul{
+		margin:20px 0% 0 0%;
+	}
+}

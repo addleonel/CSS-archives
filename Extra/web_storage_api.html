@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Web storage API</title>
+	</head>
+	<body>
+		
+		<p>I like to write code</p>
+		
+		
+		<button onclick="storage()" >Show data</button>
+		
+		<p id="show-message"></p>
+		<p id="show-author"></p>
+		<script>
+			localStorage.setItem("message", "Welcome to my website");
+			localStorage.author = "Thomas";
+
+			function storage () {
+				let message;
+				let author;
+				if (typeof(Storage) != 'undefined'){
+					
+					message = document.getElementById("show-message").innerHTML = localStorage.getItem("message");
+					author = document.getElementById("show-author").innerHTML = localStorage.author;
+				}else{
+					message = "This browser doesn't support Web storage";
+				}
+
+				console.log(message, author);
+				alertMessage = message + ", " + author 
+				alert(alertMessage);
+			}
+
+		</script>	
+	</body>
+</html> 

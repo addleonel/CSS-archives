@@ -1,0 +1,318 @@
+:root{
+	--color-title:rgb(0,0,255);
+}
+
+*{
+	margin:0;
+	padding: 0;
+}
+body{
+	margin:20px 30px 40px 30px;
+}
+
+h2{
+	color:var(--color-title, green);
+	font-family: lobster;
+	font-weight:;
+	background-color:rgba(45, 45, 45, 0.1);
+	padding:10px;
+	text-decoration: underline; 
+	text-align:left;  /*values:justify, left, right*/
+}
+
+p{
+  	text-align:justify;
+  	line-height:24px;
+  	color:hsl(); /*value:hsl(hue, satiration(0%-100%), lightness(0%-100&)) hue->tono*/
+}
+
+/*HEADER*/
+#navbar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+	background-color: #000;
+}
+
+.content-navbar{
+	padding: 10px;
+}
+
+.content-navbar ul li{
+	display: inline-block;
+}
+
+/*HOVER - pseudoclass - TOOLTIP*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border:1px solid #fff;
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom:125%;
+  left:50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+/*  background-color:#ccc;	*/
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border:5px solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*GRADIENTS*/
+.gradient-1{
+	width:300px;
+	height:300px;
+	background:linear-gradient(45deg, red, yellow, rgb(204, 204, 255)); /*background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);*/
+}
+
+.gradient-2{
+	width:200px;
+	height:300px;
+	background:linear-gradient(45deg, #445677, #238889);
+}
+.gradient-3{
+	width:200px;
+	height:300px;
+	background:repeating-linear-gradient(45deg, yellow 0px, black 40px); /*repeating-linear-gradient(angle | to side-or-corner, color-stop1, color-stop2, ...);*/
+}
+
+
+.gradient-4{
+	width:200px;
+	height:300px;
+	background:linear-gradient(to left, blue, green, red); /*to right, to top, to bottom, to left*/
+}
+
+.gradient-5{
+	width:300px;
+	height:300px;
+	background: radial-gradient(50% 50%, red, orange, yellow, white);
+}
+
+.gradient-6{
+	width: 300px;
+	height: 300px;
+	border: 2px solid #ccc;
+	background: radial-gradient(50% 50%, blue, red, green); /* x y, color-stop, color-stop, color-stop, ...*/
+}
+
+/*BACKGROUND IMAGE*/
+.background-image{
+	width: 200px;
+	height:300px;
+	background:url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
+	transform:scale(0.5); /*skewX(45deg), skewY(46deg)*/
+}
+
+.background-image:hover{
+	transform:scale(1);
+}
+/*SHADOW*/
+.shadow{
+	width: 100px;
+	height: 90px;
+	background-color: red;
+	box-shadow: 50px 20px 40px 50px green; /*value:in-X in-Y degradar tamaño color*/
+}
+/*ANIMATION*/
+
+/*
+	animation-name: example;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	
+	short form
+	animation: example 5s linear 2s infinite alternate;
+
+*/
+.animation{
+	width:100%;
+	height:200px;
+	background-color: #000;
+	animation-name:coloring;
+	animation-duration:4s;
+}
+
+@keyframes coloring{
+	0%{
+		background-color: green;
+	}
+	50%{
+		background-color: yellow;
+	}
+	100%{
+		background-color: blue;
+	}
+}
+
+/*BUTTON ANIMATED*/
+.button-animated{
+	border-radius:5px;
+	background-color: blue;
+	color: #fff;
+	padding: 5px 10px 8px 10px;
+}
+.button-animated:hover{
+	animation-name:buttonanimated;
+	animation-duration: 1s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes buttonanimated{
+	100%{
+		background-color: green;
+	}
+}
+
+/*div animation rect*/
+.div-rect{
+	width:300px;
+	height:100px;
+	margin: 20px auto;
+	background-color: #000;
+	position: relative;
+}
+
+#rect {
+    animation-name: rainbow;
+    animation-duration: 4s;
+  }
+
+  @keyframes rainbow {
+    0% {
+      background-color: blue;
+      top: 0px;
+      left: 0px;
+
+    }
+    50% {
+      background-color: green;
+      top: 50px;
+      left: 25px;
+    }
+    100% {
+      background-color: yellow;
+      top:0px;
+      left:-25px;
+    }
+  }
+
+/*BALL*/
+.ball{
+	width: 100px;
+	height:100px;
+	border-radius: 50%;
+	background: linear-gradient(45deg, #ccffff,#ffcccc);
+	position: relative;
+	animation-name:moveball;
+	animation-duration: 1s;
+	animation-iteration-count:3; /*value: n, infinite*/
+}
+
+@keyframes moveball{
+	0%{
+		top:0px;
+	}
+	50%{
+		top:267px;
+		width:160px;
+		height:80px;
+	}
+
+	100%{
+		top:0px;
+	}
+} 
+
+
+
+
+/*SEARCH*/
+section{
+	position: relative;
+}
+section #searchbar{
+	position: absolute;
+	top:100px;
+	right: 100px;
+}
+
+
+/*CARD*/
+.full-card{
+	width:400px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);  /**/
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.content-card{
+	padding: 20px;
+}
+.title-card{
+	font-family:Arial;
+	color:#000;
+	text-align: center;
+	text-decoration: None;
+	font-size: 25px;
+	margin-bottom: 20px;
+	text-transform:uppercase; /*uppercase, lowercase, capitalize, initial, inherit, none*/
+}
+.p-card{
+	text-align: justify;
+	
+}
+
+.link{
+	font-family: arial;
+	text-align: left;
+	opacity: 0.7;
+	color: rgb(0,0,0);
+}
+
+.link:hover{
+	color:blue;
+}
+
+/*
+use all together
+position:relative; // values:absolute | relative | fixed | sticky;
+top:;
+bottom:;
+left:;
+right:;
+*/

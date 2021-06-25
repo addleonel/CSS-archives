@@ -1,0 +1,129 @@
+
+:root{
+    font-family: 'Noto Sans JP', sans-serif;
+    --main-color-font: #FFFFFF; 
+}
+body{
+    background:url(https://images.pexels.com/photos/1798642/pexels-photo-1798642.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size:cover;
+}
+
+#title-container{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;   
+}
+
+#title{
+    font-size: 30px;
+    color:#FFFFFF;
+}
+
+#description{
+    font-size: 20px;
+    color:#FFFFFF;
+}
+
+#form-container{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+#survey-form{
+    padding:30px 40px;
+    background-color:rgb(255, 255, 255, 0.1);
+    color:var(--main-color-font);
+    border-radius:10px;
+    font-size:20px;
+    width: 700px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+
+}
+
+.sub-form{
+    display: flex;
+    flex-direction:column; 
+    margin:10px 0px;
+}
+
+#name{
+    height: 30px;
+    font-size: large;
+    margin-top: 15px;   
+}
+
+#email{
+    height: 30px;
+    font-size: large;
+    margin-top: 15px;
+}
+
+#number{
+    height: 30px;
+    font-size: large;
+    margin-top:15px;
+}
+#planguage{
+    height: 30px;
+    font-size: large;
+    margin-top:15px;
+}
+
+#dropdown{
+    height: 40px;
+    font-size: large;
+    margin-top:15px;
+}
+.effects{
+    border:3px solid #14693d;
+    border-radius:50px;
+    padding: 5px 20px;
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.effects:focus{
+    border:3px solid #40ee94;
+    box-shadow: 1px 5px 10px 0px rgb(218, 215, 215);
+}
+
+input[type="radio"]{
+    transform: scale(1.5);
+}
+
+input[type="checkbox"]{
+    transform:scale(1.5);
+}
+
+.sub-form__checkboxs{
+    display: flex;
+    flex-direction: column;
+}
+
+#comment{
+    height: 90px;
+    margin-top:15px;
+    font-size: 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+    color:#000;
+    background-color:rgba(255, 255, 255, 0.9);
+}
+
+#submit{
+    margin: 15px 0px;
+    font-size:large;
+    padding: 10px 0px;
+    color:#FFFFFF;
+    background-color: #14693d;
+    border:2px solid #14693d;
+    cursor:pointer;
+    border-radius: 10px;
+}
+#submit:hover{
+    background-color: #09ca66;
+}

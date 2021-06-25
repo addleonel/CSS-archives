@@ -1,0 +1,62 @@
+/*
+vw (viewport width): 10vw would be 10% of the viewport's width.
+vh (viewport height): 3vh would be 3% of the viewport's height.
+vmin (viewport minimum): 70vmin would be 70% of the viewport's smaller dimension (height or width).
+vmax (viewport maximum): 100vmax would be 100% of the viewport's bigger dimension (height or width).
+*/
+*{
+	margin:0;
+	padding:0;
+	font-family: 'Heebo', sans-serif;
+}
+
+main{
+	background-color: #ccc;
+}
+#title-article{
+	text-align: center;
+	padding: 20px 10px;
+}
+#some-explain{
+	text-align: center;
+}
+.image-container{
+	display: flex;
+	justify-content: center;
+	margin: 20px auto;
+}
+.image{
+	background-color: #fff;
+	padding: 10px 20px;
+}
+.responsive-image{
+	max-width: 100%;
+	height: auto;
+}
+.subtitle-image{
+	text-align: center;
+}
+.section-text{
+	padding: 10px 20px;
+	margin: 10px 20px;
+	line-height: 30px;
+}
+
+.list-par{
+	margin: 10px 0px 10px 40px;
+}
+
+@media screen and (max-width:600px){
+	.section-text{
+		line-height: 25px;
+	}
+	.section-text p, .section-text ul, .section-text blockquote{
+		font-size: 90%;
+	}
+	#title-article{
+		font-size: 25px;
+	}
+	.image-container{
+		display: block;
+	}
+}

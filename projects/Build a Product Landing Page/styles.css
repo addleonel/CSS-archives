@@ -1,17 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 *{
 	margin:0;
 	padding: 0;
 }
 
+body{
+	font-family: 'Lato', sans-serif;
+	color: rgb(31, 30, 30);
+}
+
 #header{
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #FFF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+#header-content {
 	max-width: 1140px;
-	width:100%;
+	width: 100%;
 	height: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	position: fixed;
-	z-index: 1000;
+	padding: 10px 0;
+	margin: 0 auto;
 }
 
 #header-img{
@@ -23,12 +43,225 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	list-style-type: none;
+}
+
+#nav-bar ul li {
+	margin-left: 20px;
+	text-align: center;
 }
 
 #nav-bar ul li a{
 	text-decoration: none;
+	color: rgb(31, 30, 30);
+	padding: 10px 20px;
+	border-radius: 10px;
+	font-weight: bold;
+	transition: .4s ease;
+}
+
+#nav-bar ul li a:hover{
+	background-color: #f2f2f2;
 }
 
 main{
 	margin-top: 50px;
+}
+
+/* FORM SECTION */
+
+.form-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+}
+
+.form-title {
+	font-size: 40px;
+}
+
+#form {
+	margin-top: 30px;
+}
+
+#email {
+	border: 1px solid #f2f2f2;
+	padding: 10px 20px;
+	font-size: 20px;
+	border-radius: 10px;
+}
+
+#email:focus {
+	border: 1px solid #6767d1;
+	box-shadow: none;
+	outline: none;
+}
+
+#submit {
+	margin-left: 20px;
+	padding: 10px 20px;
+	font-size: 20px;
+	border-radius: 10px;
+	border: none;
+	background-color: #6767d1;
+	color: #FFF;
+	transition: .4s ease;
+	cursor: pointer;
+}
+
+#submit:hover{
+	background-color: #7878f0;
+}
+
+/* Feature */
+
+#feature {
+	max-width: 1140px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 40px auto;
+}
+
+.feature {
+	text-align: center;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin: 20px 10px;
+	padding: 40px;
+	background-color: #dce0ff;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
+
+/* Video */
+
+#how {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#video {
+	border-radius: 30px;
+}
+
+#pricing{
+	max-width: 1140px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 60px auto;
+}
+
+.price {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	width: 200px;
+	height: 300px;
+	margin:20px 20px;
+	padding: 50px 50px;
+	border-radius: 30px;
+	background-color: #e5e4ff;
+}
+
+.price:hover {
+	transform: scale(1.01);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;;
+}
+.price-button {
+	margin-left: 20px;
+	padding: 10px 20px;
+	font-size: 20px;
+	border-radius: 10px;
+	border: none;
+	background-color: #6767d1;
+	color: #FFF;
+	transition: .4s ease;
+	cursor: pointer;
+}
+
+.price-button:hover{
+	background-color: #7878f0;
+}
+
+/* Footer */
+
+.footer {
+	width: 100%;
+	height: auto;
+	padding: 20px 0;
+	background-color: #6767d1;
+}
+
+
+.terms {
+	max-width: 1140px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	margin: 0 auto;
+}
+
+.terms ul{
+	display: flex;
+	justify-content: space-between;
+}
+
+.terms ul li {
+	list-style-type: none;
+	margin-left:20px;
+}
+
+.terms ul li a{
+	text-decoration: none;
+	color: #FFF;
+}
+
+.copyright {
+	max-width: 1140px;
+	width: 100%;
+	margin: 10px auto;
+	text-align: end;
+}
+
+@media screen and (max-width: 580px) {
+	#header-content {
+		flex-direction: column;
+
+	}
+	#form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+	
+	#email {
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	#video {
+		width: 300px;
+		height: 200px;
+		border-radius: 10px;
+	}
+	
+	.terms {
+		justify-content: center;
+	}
+
+	.copyright {
+		text-align: center;
+	}
 }

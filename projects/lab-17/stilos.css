@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+body {background-image: url(imagenes/fondo.png);} 
+main{width:1004px;
+    height:658px;
+    margin:auto;}
+header{height:128px;background-color:#F3C1}
+nav{height:340px; background-color:1960} 
+article{width:652px;height:662px;background-color:#FFF;float:left}
+aside{width:352px;height:662px; background-color:#FC0;margin-left:652px}
+footer{height: 243px; background-color:#F3C;clear:both} 

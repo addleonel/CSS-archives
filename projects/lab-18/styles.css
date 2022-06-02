@@ -1,0 +1,173 @@
+ul, ul li {
+    margin-left: 15px;
+    margin-top: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+h1, h2, h3, p, form {
+    margin:0;
+    padding: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+img {
+    border: none;
+}
+
+#contenedor {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+header #logo {
+    float: left;
+}
+
+header #buscador {
+    float: right;
+}
+
+nav ul #menu_principal li{
+    display: inline;
+    float:  left;
+}
+
+#contenido section img {
+    width: 100px;
+    float: left;
+}
+
+section {
+    margin: 10px 0;
+}
+
+footer .enlaces {
+    float: left;
+}
+
+footer .copyright {
+    float: right;
+    font-weight: bold;
+}
+
+header, nav, aside, aside#noticias, aside #publicidad, #contenido, 
+#contenido article, #contenido aside, footer {
+    padding: .5em;
+    border: none;
+}
+
+aside {
+    padding: 0;
+    background-color: #37AEE8;
+}
+
+header {
+    padding: .7em;
+}
+
+nav {
+    margin-bottom: .5em;
+    border-bottom: 1px solid #004c99;
+    font-weight: bold;
+    clear: both;
+    background-color: #666;
+}
+
+/* header, nav, aside, #contenido, #contenido article, #contenido aside, footer {
+    border: 2px solid #777;
+} */
+
+header {
+    background-color: #7ac034;
+}
+
+#contenido article header {
+    /* background-color: transparent; */
+    border: none;
+}
+
+aside {
+    float: left;
+    width: 20%;
+}
+
+#contenido {
+    float: right;
+    width: 78%;
+}
+
+
+#contenido article{
+    float: left;
+    width: 73%;
+}
+
+
+#contenido aside{
+    float: right;
+    width: 20%;
+}
+
+footer {
+    clear: both;
+    height: 18px;
+}
+
+#contenido {
+    width: 77%;
+    padding: 0;
+}
+
+a {
+    color: #F60;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #690;
+}
+
+body {
+    font-family:  Tahoma, Geneva, sans-serif;
+    font-size: 13px;
+}
+
+#contenido aside {
+    border: 1px solid #C60;
+    background-color: #Fc0;
+}
+
+footer {
+    padding: 0.5em;
+    margin-top: 1em;
+    border-top: 1px solid #c5c5c5;
+    border-bottom: 1px solid #c5c5c5;
+    background-color: #585858;
+}
+article {
+    margin-bottom: 1em;
+}
+
+article section img{
+    margin: .5em;
+}
+
+aside #noticias {
+    border: 1px solid #c5c5c5;
+}
+
+aside #publicidad {
+    margin-top: 1em;
+    border: 1px dashed #c60;
+}
+
+footer ul li{
+    display: inline;
+    float:  left;
+}

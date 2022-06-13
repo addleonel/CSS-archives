@@ -41,7 +41,7 @@ th {
 
 }
 
-@keyframes animateTable {
+/* @keyframes animateTable {
     0% {
         background-color: rgb(29, 180, 67);
     }
@@ -51,7 +51,7 @@ th {
     100% {
         background-color: rgb(29, 180, 67);
     }
-}
+} */
 
 td {
     background-color: rgb(194, 243, 194);
@@ -59,7 +59,7 @@ td {
     transition: all .4s;
 }
 
-td:hover {
+/* td:hover {
     background-color: rgb(160, 224, 226);
     transform: scale(1.1);
-}
+} */

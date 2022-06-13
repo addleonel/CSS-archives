@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    padding: 30px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+th, td {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+th {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background-color: rgb(29, 102, 180);
+    animation-name: animateTable;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes animateTable {
+    0% {
+        background-color: rgb(29, 180, 67);
+    }
+    50% {
+        background-color: rgb(29, 102, 180);
+    }
+    100% {
+        background-color: rgb(29, 180, 67);
+    }
+}
+
+td {
+    background-color: rgb(194, 243, 194);
+    cursor: pointer;
+    transition: all .4s;
+}
+
+td:hover {
+    background-color: rgb(160, 224, 226);
+    transform: scale(1.1);
+}

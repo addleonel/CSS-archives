@@ -12,6 +12,18 @@
     align-items: center;
 }
 
+form {
+    margin: 100px;
+}
+
+input {
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+
+
 .videos {
     display: flex;
     justify-content: space-between;
@@ -29,3 +41,4 @@ p {
     padding: 10px;
     font-weight: bold;
 }
+

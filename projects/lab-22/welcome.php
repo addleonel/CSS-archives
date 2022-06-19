@@ -10,11 +10,11 @@
 <body>
     <div id="container">
         <h1>Bienvenido a la pagina</h1>   
-        <p>Nombre: Leonel</p>
-        <p>Apellido: Aquino</p>
-        <p>Email: example@example.com</p>
-        <p>Fecha de nacimiento: 02/14/2022</p>
-        <p>Genero: Hombre</p>
+        <p>Nombre: <?php echo $_GET["name"];?></p>
+        <p>Apellido:  <?php echo $_GET["surname"];?></p>
+        <p>Email:  <?php echo $_GET["email"];?></p>
+        <p>Fecha de nacimiento:  <?php echo $_GET["date"];?></p>
+        <p>Genero:  <?php echo $_GET["gender"];?></p>
     </div>
 </body>
 </html>
